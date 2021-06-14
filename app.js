@@ -23,41 +23,33 @@ favMovie('Shrek', 'Ellie');
 //Create a new arrow function called getFirstName:
 //Function should take one parameter for full name and return the first name:
 
-let fullName = 'Ellie Banks';
-let firstName = fullName.split(' '); 
 
 let getFirstName = fullName => {
-    console.log(firstName[0]);
+    console.log(fullName.split(" ")[0]);
 };
-getFirstName();
+getFirstName('Ellie Banks');
 
 //Create a new arrow function called getFirstNameConcise using concise body syntax:
-let getFirstNameConcise = fullName => console.log(firstName[0]);
+let getFirstNameConcise = fullName => console.log(fullName.split(" ")[0]);
 
-getFirstNameConcise();
+getFirstNameConcise('Ellie Banks');
 
 //Create a new function named doMath that will take in two parameters and return an object literal. 
 //It should have two properties, the exponent result (x^y) and the product of the two numbers.
 
-let doMath = (x,y) => {
-    let exponentResult = Math.pow(x,y);
-    let productResult = x * y;
-    console.log(`exponent: ${exponentResult} product: ${productResult}`);
-
+let doMath = (x,y) => {        
     return {
-        exponent: exponentResult,
-        product: productResult
-    };
+        result: Math.pow(x,y),
+        product: x * y
+    }
 }
 
-let results = doMath(5,2);
-console.log(results);
-
-//I don't know if I did this right. The only way that I was able to have the template literals work was if it was console.log'd into the function. 
+let thisMath = doMath(5,2);
+console.log(`exponent: ${thisMath.result} product: ${thisMath.product}`);
 
 //Write a function that takes 3 parameters. Using the spread operator, insert the values of an array
 function newFunc(name, location, favFood) {
-    console.log(`${name} ${location} ${favFood}`);
+    console.log(`My name is ${name}. I live in ${location}. My favorite food is ${favFood}`);
 }
 
 let enteredValues = ['Ellie', 'Birmingham', 'Oreos'];
