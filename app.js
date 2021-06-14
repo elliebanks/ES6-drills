@@ -45,7 +45,7 @@ let doMath = (x,y) => {
 }
 
 let thisMath = doMath(5,2);
-console.log(`exponent: ${thisMath.result} product: ${thisMath.product}`);
+console.log(`The result of 5 to the power of 2 is ${thisMath.result}. The product of 5 and 2 is ${thisMath.product}`);
 
 //Write a function that takes 3 parameters. Using the spread operator, insert the values of an array
 function newFunc(name, location, favFood) {
